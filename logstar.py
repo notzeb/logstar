@@ -41,7 +41,7 @@ def halfexp(x, repeat = default_repeat):
   return tetrate(lstar(x, repeat)+0.5, repeat)
 
 def halflog(x, repeat = default_repeat):
-  """function f satisfying f(f(x)) = e(x)"""
+  """function f satisfying f(f(x)) = l(x)"""
   return tetrate(lstar(x, repeat)-0.5, repeat)
 
 def fracexp(x, frac, repeat = default_repeat):
