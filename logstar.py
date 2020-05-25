@@ -26,8 +26,8 @@ def tetrate(x):
   compare = 1
   for i in range(100):
     compare = ell(compare)
-  it = math.floor(x)
-  ans = compare + (x-it)*(compare-ell(compare))
+  it = math.ceil(x)
+  ans = compare + (x-it)*(compare - ell(compare))
   for i in range(100+it):
     ans = em(ans)
   return ans
