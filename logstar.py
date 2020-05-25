@@ -18,7 +18,8 @@ def lstar(x):
   for i in range(100):
     compare = ell(compare)
     x = ell(x)
-  ans = ans + (x-compare)/(compare - ell(compare))
+  #ans = ans + (x-compare)/(compare - ell(compare))
+  ans = ans+(2/compare-2/x)
   return ans
 
 def tetrate(x):
@@ -27,7 +28,8 @@ def tetrate(x):
   for i in range(100):
     compare = ell(compare)
   it = math.ceil(x)
-  ans = compare + (x-it)*(compare - ell(compare))
+  #ans = compare + (x-it)*(compare - ell(compare))
+  ans = 2/(2/compare - (x-it))
   for i in range(100+it):
     ans = em(ans)
   return ans
