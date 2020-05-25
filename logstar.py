@@ -21,3 +21,18 @@ def lstar(x):
   ans = ans + (x-compare)/(compare - ell(compare))
   return ans
 
+def tetrate(x):
+  """inverse function of l*"""
+  compare = 1
+  for i in range(100):
+    compare = ell(compare)
+  it = math.floor(x)
+  ans = compare + (x-it)*(compare-ell(compare))
+  for i in range(100+it):
+    ans = em(ans)
+  return ans
+
+def halfexp(x):
+  """function f satisfying f(f(x)) = e(x)"""
+  return tetrate(lstar(x)+0.5)
+
